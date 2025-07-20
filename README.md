@@ -16,15 +16,17 @@ can publish students' marks, thereby allowing students to stay updated on their 
 analyze their performance and identify possible areas of improvement. This platform, hence helps students
 <br>
 to understand their capability and aim for better results in the upcoming examinations.
-
+<br>
+<br>
 This project was developed as part of our academic coursework in JNTUH University by:
+<br>
 **Viswanath Balla**
 <br>
 **Vishnudev Butla**
 <br>
 **T. Srivasthav**
 <br>
-<br>
+
 ## Features:
 <br>
 ● User Authentication: Login using user_id and password.

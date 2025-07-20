@@ -21,10 +21,8 @@ to understand their capability and aim for better results in the upcoming examin
 This project was developed as part of our academic coursework in JNTUH University by:
 <br>
 
-**Viswanath Balla**
-
-**Vishnudev Butla**
-
+**Viswanath Balla**<br>
+**Vishnudev Butla**<br>
 **T. Srivasthav**
 
 
@@ -42,12 +40,9 @@ This project was developed as part of our academic coursework in JNTUH Universit
 
 ## Tech Stack:
 <br>
+
 - **Frontend**: HTML, CSS, Bootstrap
-<br>
 - **Backend**: Flask (Python)
-<br>
 - **Database**: SQLite
-<br>
 - **Data Visualization**: Matplotlib
-<br>
 - **Tools Used**: Visual Studio Code, Git, GitHub

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overall Performance</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 20px auto;
+            font-family: Arial, sans-serif;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: hsl(42, 100%, 48%);
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm rounded p-3">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <div class="navbar-nav">
+                    <a class="btn btn-primary me-2" href="/s_dashboard">Dashboard</a>
+                    <a class="btn btn-primary me-2" href="/past_exams">Past Exams</a>
+                    <a class="btn btn-danger" href="/logout">Logout</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container mt-4">
+        <h1 class="text-center text-secondary">Overall Performance</h1>
+        <form method="POST" action="/performance">
+            <div class="mb-3">
+                <input type="number" class="form-control w-25" name="target" placeholder="Enter Target GPA" max="10" min="6" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Performance Table -->
+    <div class="container mt-4">
+        <h4 class="text-center text-secondary">You Need The Following Marks Subjectwise To Reach Your Goal</h4>
+        <table>
+            <thead>
+                <tr>
+                    <th>M1</th>
+                    <th>ECSE</th>
+                    <th>SE</th>
+                    <th>SD</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                {% for i in range(length) %}
+                    {%if mark[i]<=60 %}
+                    <td>{{ mark[i] }}</td>
+                    {% else %}
+                    <td>Marks in mid too less to reach target...</td>
+                    {% endif %}
+                {% endfor %}
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="container mt-4">
+        {% if plot %}
+        <img src="{{ url_for('static', filename=plot) }}" alt="Performance Graph" class="img-fluid">
+        {% else %}
+        <p class="text-danger">Performance graph not available</p>
+        {% endif %}
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,64 @@
+CREATE TABLE professors(pid integer,
+pname varchar(225),
+post varchar(225),
+dept varchar(25));
+
+CREATE TABLE student(
+sid INTEGER,
+sname varchar(225),
+course varchar(225),
+dept varchar(225),
+yr INTEGER,
+sem INTEGER,
+CGPA NUMERIC,
+creds_achieved INTEGER
+);
+
+insert into student(sid,sname, course,dept,yr,sem) values
+(1000,'Honey','CSM','CSE',2,2),
+(1001,'Bob','CSM','CSE',2,2),
+(1002,'Alice','CSM','CSE',2,2),
+(1003,'Alan','CSM','CSE',2,2),
+(1004,'Rahul','CSM','CSE',2,2);
+
+CREATE TABLE creds(
+subname varchar(225),
+creds INTEGER
+);
+
+insert into creds(subname , creds)
+ VALUES('m1',4),
+('ecse',4),
+('sd',4),
+('se',4);
+
+CREATE TABLE marks(
+sid INTEGER ,
+exam_name VARCHAR(225),
+m1 INTEGER,
+ecse INTEGER,
+sd INTEGER,
+se INTEGER
+);
+
+CREATE TABLE total_marks(
+exam_name varchar(225),
+max_marks integer
+);
+
+insert into marks(sid, exam_name, m1,ecse,sd,se) values
+(1000,'MID_1',40,36,38,30),
+(1000,'MID_2',38,39,39,29),
+(1001,'MID_1',36,37,38,36),
+(1001,'MID_2',34,37,37,33),
+(1002,'MID_1',40,37,35,35),
+(1002,'MID_2',40,36,37,36),
+(1003,'MID_1',40,35,35,34),
+(1003,'MID_2',40,38,35,34),
+(1004,'MID_1',36,37,34,35),
+(1004,'MID_2',39,39,37,35);
+
+insert into total_marks (exam_name,max_marks) values 
+('MID_1',40),
+('MID_2',40),
+('SEM',60);

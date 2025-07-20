@@ -36,7 +36,7 @@ This project was developed as part of our academic coursework in JNTUH Universit
 ● Target setting: Allows student to set a target GPA.
 <br>
 ● Score required in the final exam to reach target: This system takes the scores of the student in the mid-term exams and shows how much the student needs to score in the finals in order to reach his target GPA.
-<br>
+
 ## Tech Stack:
 <br>
 - **Frontend**: HTML, CSS, Bootstrap

@@ -2,7 +2,7 @@
 <br>
 A web-based application to help professors and students track, analyze, and visualize academic performance efficiently.
 <br>
-<br>
+
 ## Project Overview:
 <br>
 The Student Performance Analyzer is a platform which is designed to help the student monitor their

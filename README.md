@@ -20,12 +20,13 @@ to understand their capability and aim for better results in the upcoming examin
 <br>
 This project was developed as part of our academic coursework in JNTUH University by:
 <br>
+
 **Viswanath Balla**
-<br>
+
 **Vishnudev Butla**
-<br>
+
 **T. Srivasthav**
-<br>
+
 
 ## Features:
 <br>
